@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #212529;
+}
+
+.logoF1{
+  width: 48px;
+}
