@@ -88,3 +88,11 @@ nav{
   border-radius: 5px;
   margin-left: 1rem;
 }
+
+.itemCount{
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: max-content;
+}

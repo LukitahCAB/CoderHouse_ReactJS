@@ -1,30 +1,48 @@
-const redbullHat = <img class="item__img" src="./img/redbull_hat.png" alt="redbull gorra"/>
-const ItemsListContainer = () => {
+import React from 'react';
+const redbullHat = <img className='item__img' src='./img/redbull_hat.png' alt='redbull gorra'/>
+let a, b, c;
+const init = 1;
+a = init; b = init; c = init;
+const ItemsListContainer = ({gorra}) => {
     return(
-        <div class="items">
-            <div class="item">
+        <div className='items'>
+            <div className='item'>
                 <div>{redbullHat}</div>
-                <div class="card-body">
-                    <p class="card-text">Gorra Red Bull Racing</p>
-                    <button class="btn btn-dark">Comprar</button>
+                <div className='card-body'>
+                    <p className='card-text'>{gorra}</p>
+                    <div>
+                        <button className='btn btn-dark'>Agregar</button>
+                        <button className='btn btn-dark'>+</button>
+                        <button className='btn btn-dark'>-</button>
+                        <button className='btn btn-outline-warning disabled'>{a}</button>
+                    </div>
                 </div>
             </div>
-            <div class="item">
+            <div className='item'>
                 <div>{redbullHat}</div>
-                <div class="card-body">
-                    <p class="card-text">Gorra Red Bull Racing</p>
-                    <button class="btn btn-dark">Comprar</button>
+                <div className='card-body'>
+                    <p className='card-text'>{gorra}</p>
+                    <div>
+                        <button className='btn btn-dark'>Agregar</button>
+                        <button className='btn btn-dark'>+</button>
+                        <button className='btn btn-dark'>-</button>
+                        <button className='btn btn-outline-warning disabled'>{b}</button>
+                    </div>
                 </div>
             </div>
-            <div class="item">
+            <div className='item'>
                 <div>{redbullHat}</div>
-                <div class="card-body">
-                    <p class="card-text">Gorra Red Bull Racing</p>
-                    <button class="btn btn-dark">Comprar</button>
+                <div className='card-body'>
+                    <p className='card-text'>{gorra}</p>
+                    <div>
+                        <button className='btn btn-dark'>Agregar</button>
+                        <button className='btn btn-dark'>+</button>
+                        <button className='btn btn-dark'>-</button>
+                        <button className='btn btn-outline-warning disabled'>{c}</button>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-    }
+    )}
     
   export default ItemsListContainer;
