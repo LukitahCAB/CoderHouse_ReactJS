@@ -3,19 +3,15 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [counter, setCounter] = useState(initial);
     const confirmar = ()=> setCounter(initial);
     function increase() {
-        if(counter == stock){
-            counter = stock;
-        } else {
+        if(counter < stock){
             setCounter(counter +1);
         }
     } 
     function decrease() {
-        if(counter == initial){
-            counter = initial;
-        } else {
+        if(counter > initial){
             setCounter(counter -1);
         }
-    }
+    } 
     const reset = ()=> setCounter(initial);
     return(
             <div className='itemCount container'>

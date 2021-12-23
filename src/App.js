@@ -14,7 +14,7 @@ function App() {
       </nav>
       <main>
         <ItemsListContainer gorra='Gorra Red Bull Racing'/>
-      <ItemCount initial='1' stock='7' /> 
+      <ItemCount initial={1} stock={7} /> 
       </main>
     </div>
   );
