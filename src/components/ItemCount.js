@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 const ItemCount = ({stock, initial, onAdd}) => {
     const [counter, setCounter] = useState(initial);
-    const confirmar = ()=> setCounter(initial);
+    const confirmar = ()=> console.log('Cantidad agregada al carrito: '+counter);
     function increase() {
         if(counter < stock){
             setCounter(counter +1);

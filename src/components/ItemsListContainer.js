@@ -1,48 +1,36 @@
 import React from 'react';
+import ItemCount from './ItemCount'
+import ItemList from './ItemList'
+import {useEffect, useState} from 'react'
 const redbullHat = <img className='item__img' src='./img/redbull_hat.png' alt='redbull gorra'/>
-let a, b, c;
-const init = 1;
-a = init; b = init; c = init;
+const arrayProductos = [
+    {id: '1', name: 'Gorra 1', stock : 5},
+    {id: '2', name: 'Gorra 2', stock : 3},
+    {id: '3', name: 'Gorra 3', stock : 4},
+    {id: '4', name: 'Gorra 4', stock : 5}
+]
 const ItemsListContainer = ({gorra}) => {
+    
+    useEffect(() =>{
+
+        const promise = new Promise((resolve, reject) => {
+
+            setTimeout(() =>{
+
+                resolve(arrayProductos)
+            
+            }, 2000)
+        })
+
+        promise.then((productos)=>{
+            console.log('Cargado con exito');
+            console.log(productos);
+        })
+        
+    })
     return(
-        <div className='items'>
-            <div className='item'>
-                <div>{redbullHat}</div>
-                <div className='card-body'>
-                    <p className='card-text'>{gorra}</p>
-                    <div>
-                        <button className='btn btn-dark'>Agregar</button>
-                        <button className='btn btn-dark'>+</button>
-                        <button className='btn btn-dark'>-</button>
-                        <button className='btn btn-outline-warning disabled'>{a}</button>
-                    </div>
-                </div>
-            </div>
-            <div className='item'>
-                <div>{redbullHat}</div>
-                <div className='card-body'>
-                    <p className='card-text'>{gorra}</p>
-                    <div>
-                        <button className='btn btn-dark'>Agregar</button>
-                        <button className='btn btn-dark'>+</button>
-                        <button className='btn btn-dark'>-</button>
-                        <button className='btn btn-outline-warning disabled'>{b}</button>
-                    </div>
-                </div>
-            </div>
-            <div className='item'>
-                <div>{redbullHat}</div>
-                <div className='card-body'>
-                    <p className='card-text'>{gorra}</p>
-                    <div>
-                        <button className='btn btn-dark'>Agregar</button>
-                        <button className='btn btn-dark'>+</button>
-                        <button className='btn btn-dark'>-</button>
-                        <button className='btn btn-outline-warning disabled'>{c}</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )}
+        <ItemList/>
+    )
+}
     
   export default ItemsListContainer;
